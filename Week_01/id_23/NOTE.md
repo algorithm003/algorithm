@@ -8,6 +8,10 @@
 > 题解：TODO
 
 - 简单：https://leetcode-cn.com/problems/rotate-array/
+> 思路：要求空间复杂度为O1，意味着不能在申请一个相同长度的数组。想到了2种思路，第一种就是每次数组所有元素向右移动1位，循环k次即可；第二种是把前n-k个元素反转，再把后k个元素反转，最后把整个数组反转。
+> 
+> 题解：TODO
+
 - 简单：https://leetcode-cn.com/problems/merge-two-sorted-lists/
 - 简单：https://leetcode-cn.com/problems/merge-sorted-array/
 - 中等：https://leetcode-cn.com/problems/swap-nodes-in-pairs/
