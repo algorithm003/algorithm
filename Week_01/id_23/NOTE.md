@@ -2,6 +2,7 @@
 
 ## 数组、链表
 - 简单：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
+
 这道题删除数组重复元素，数组是递增有序的，且要求在原数组中直接操作且不能额外分配数组空间，那这里只需要记住去重元素后的下标，遍历数组将不重复的元素以此拷贝到去重下标所在的数组即可，数组长度即最后拷贝后的下标+1。
 
 - 简单：https://leetcode-cn.com/problems/rotate-array/
