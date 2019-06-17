@@ -18,6 +18,10 @@
 > 题解：TODO
 
 - 简单：https://leetcode-cn.com/problems/merge-sorted-array/
+> 思路：有2种思路，第一种是先把num2数组的n个元素放到num1数组m个元素之后，再对num1数组的前m+n个元素做排序；第二种是直接在num1数组做合并，从m+n-1下标开始依次把待合并的较大元素复制过去。
+> 
+> 题解：TODO
+
 - 中等：https://leetcode-cn.com/problems/swap-nodes-in-pairs/
 - 中等：https://leetcode-cn.com/problems/3sum/
 
