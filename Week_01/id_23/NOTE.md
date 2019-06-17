@@ -28,6 +28,9 @@
 > 题解：TODO
 
 - 中等：https://leetcode-cn.com/problems/3sum/
+> 思路：问题转换为对于数组中任意两个元素a和b，找到第三个元素-(a+b)。排除暴力的解法外，还有另外一种思路，先对数组做排序，再做两层循环遍历a和b，在接下来的元素中采用二分查找找到-(a+b)。
+> 
+> 题解：TODO
 
 ## Map & Set
 - 简单：https://leetcode-cn.com/problems/valid-anagram/
