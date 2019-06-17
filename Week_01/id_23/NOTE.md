@@ -13,6 +13,10 @@
 > 题解：TODO
 
 - 简单：https://leetcode-cn.com/problems/merge-two-sorted-lists/
+> 思路：这个题目考察的是对于链表的操作，实现上要注意的点是合并链表的头指针初始化、合并时next指针的拼接，及当某个链表合并完成后的收尾工作。
+> 
+> 题解：TODO
+
 - 简单：https://leetcode-cn.com/problems/merge-sorted-array/
 - 中等：https://leetcode-cn.com/problems/swap-nodes-in-pairs/
 - 中等：https://leetcode-cn.com/problems/3sum/
