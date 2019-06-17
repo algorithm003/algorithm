@@ -23,6 +23,10 @@
 > 题解：TODO
 
 - 中等：https://leetcode-cn.com/problems/swap-nodes-in-pairs/
+> 思路：链表中两两元素交换，这里申请一个哨兵节点来做会更容易处理，哨兵节点的next指向待处理的head指针，那么问题就转换为交换后两个节点的子问题。
+> 
+> 题解：TODO
+
 - 中等：https://leetcode-cn.com/problems/3sum/
 
 ## Map & Set
