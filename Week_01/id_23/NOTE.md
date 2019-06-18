@@ -39,6 +39,9 @@
 > 题解：TODO
 
 - 中等：https://leetcode-cn.com/problems/group-anagrams/
+> 思路：思路一是两层循环遍历每两个元素，判断两个元素是否为异位词，如果是则存储在同一个结果集里；思路二是建立一个hash算法，满足异位词计算的hash值相同，这样就可以用map来将不同的异位词分组。
+> 
+> 题解：TODO
 
 ## 堆栈、队列
 - 简单：https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/
