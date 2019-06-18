@@ -34,6 +34,10 @@
 
 ## Map & Set
 - 简单：https://leetcode-cn.com/problems/valid-anagram/
+> 思路：思路一先对两个字符串做排序再比较，思路二是对每个字符串中字母个数做统计，比较统计结果是否一致。
+> 
+> 题解：TODO
+
 - 中等：https://leetcode-cn.com/problems/group-anagrams/
 
 ## 堆栈、队列
