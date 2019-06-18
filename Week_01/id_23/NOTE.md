@@ -45,6 +45,10 @@
 
 ## 堆栈、队列
 - 简单：https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/
+> 思路：这个题跟判断字符串里的括号是否匹配很类似，可以用栈来实现。
+> 
+> 题解：TODO
+
 - 简单：https://leetcode-cn.com/problems/remove-outermost-parentheses/
 - 困难：https://leetcode.com/problems/largest-rectangle-in-histogram/
 - 困难：https://leetcode.com/problems/trapping-rain-water/
