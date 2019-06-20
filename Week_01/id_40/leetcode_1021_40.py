@@ -6,7 +6,7 @@
 # 空间复杂度: O(N)
 
 
-class Solution:
+class Solution1:
     def removeOuterParentheses(self, S: str) -> str:
         result = ""
         stack = []
@@ -25,7 +25,7 @@ class Solution:
 # 时间复杂度: O(N)
 # 空间复杂度: O(N)
 
-class Solution:
+class Solution2:
     def removeOuterParentheses(self, S: str) -> str:
         result = ''
         flag = 0
