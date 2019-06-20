@@ -50,6 +50,10 @@
 > 题解：TODO
 
 - 简单：https://leetcode-cn.com/problems/remove-outermost-parentheses/
+> 思路：这道题通过栈可以获取到需要删除的外层括号的位置，再将无需删除的串拼接起来即可。
+> 
+> 题解：TODO
+
 - 困难：https://leetcode.com/problems/largest-rectangle-in-histogram/
 - 困难：https://leetcode.com/problems/trapping-rain-water/
 
