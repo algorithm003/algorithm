@@ -21,7 +21,7 @@ public:
 };*/
 
 class Solution {
-public:
+public: 
     string removeDuplicates(string S) {
         string result = "";
         for (auto &c : S) {
