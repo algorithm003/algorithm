@@ -64,6 +64,10 @@
 > 题解：TODO
 
 - 中等：https://leetcode-cn.com/problems/powx-n/
+> 思路：将x^n转换为(x/2)^n^2，再处理下n为负数及奇数的情况。
+> 
+> 题解：TODO
+
 - 困难：https://leetcode-cn.com/problems/dungeon-game/
 
 ## 递归
