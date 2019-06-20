@@ -2,13 +2,15 @@
 
 # 思路 1: 普通归并
 
+from typing import List
+
 class Solution1:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
         Do not return anything, modify nums1 in-place instead.
         """
         _m = []
-        p0,p1,p2 = 0,0,0
+        p1,p2 = 0,0
         while p1 < m and p2 < n:
             if nums1[p1]<=nums2[p2]:
                 _m.append(nums1[p1])
