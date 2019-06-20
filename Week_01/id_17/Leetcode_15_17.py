@@ -13,9 +13,10 @@ class Solution:
                 continue
             left = i + 1
             right = length - 1
+            if left + 1 < right - 1 and not nums[left] + nums[left+1] <= -nums[i] <= nums[right] + nums[right-1]:
+                continue
             while left < right:
                 s = nums[i] + nums[left] + nums[right]
-                #s = sum(tmp)
                 if s > 0:
                     right -= 1
                 elif s < 0:
@@ -29,4 +30,3 @@ class Solution:
                     left += 1
                     right -= 1
         return res
-            
