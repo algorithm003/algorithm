@@ -1,6 +1,8 @@
 # https://leetcode-cn.com/problems/merge-sorted-array/
 
 # 思路 1: 普通归并
+# 时间复杂度: O(m+n)
+# 空间复杂度: O(m+n) (可优化至O(m))
 
 from typing import List
 
@@ -32,6 +34,8 @@ class Solution1:
 # 观察到 nums1 从 m 到最后一个位置都是 0 值, 或者我们不关心的值. 这就给归并带来了可利用的空间: 
 # 普通归并需要第三个数组来暂存归并数据, 而现在的 nums1 本身就可以承担此角色, 只需倒过来, 
 # 从 m+n-1 的位置倒序归并即可. 但是要注意, 倒序处理的大小比较与正序是相反的.
+# 时间复杂度: O(m+n)
+# 空间复杂度: O(m+n)
 
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:

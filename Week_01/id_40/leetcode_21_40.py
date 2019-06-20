@@ -6,6 +6,8 @@
 # 处理逻辑: 判断两个节点值的大小, 就让较小的那个的 next 指向下一个待确定的节点
 # 递归下沉: 将较小节点的下一个结点, 和较大结点作为入参传入本函数
 # 返回值 : 较小节点
+# 时间复杂度: O(m+n)
+# 空间复杂度: O(m+n)
 
 from typing import List
 
@@ -35,6 +37,8 @@ class Solution1:
 # 思路 2: 迭代法
 # 增加头结点, 双指针 + 单指针. 单指针用于 "织网", 从 prehead 开始持续维护已经符合要求的节点. 双指针用于分别遍历比较两个链表. 最后返回 prehead.next.
 # 易错点: 有好几次忘记迭代单指针 cur 本身, 一定要注意!!
+# 时间复杂度: O(m+n)
+# 空间复杂度: O(1)
 
 class Solution2:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
