@@ -17,7 +17,7 @@ class Solution1:
         nums[:] = nums[-k:] + nums[:-k]
 
 # 思路 2: 循环法
-# 循环 k 次,每次从数组末尾移除放至头部.空间复杂度为 O(1)
+# 循环 k 次,每次从数组末尾移除放至头部.
 
 class Solution2:
     def rotate(self, nums: List[int], k: int) -> None:
@@ -28,3 +28,6 @@ class Solution2:
         
         for i in range(k):
             nums.insert(0, nums.pop())
+
+# 时间复杂度: O(n)
+# 空间复杂度: O(1)
