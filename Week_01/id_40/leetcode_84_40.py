@@ -1,9 +1,11 @@
 # https://leetcode-cn.com/problems/largest-rectangle-in-histogram/submissions/
 
 # 思路 1: 暴力法
-# 对于每个索引,都尝试向左,向右延伸,计算出所有可能的值,再找出最大值
+# 对于每个索引, 都尝试向左, 向右延伸, 计算出所有可能的值, 再找出最大值
 # 时间复杂度: O(n^2)
 # 空间复杂度: O(n)
+
+from typing import List
 
 
 class Solution1:
@@ -38,7 +40,6 @@ class Solution1:
                     break
 
         return m
-
 
 
 # 思路 2: 待总结...
