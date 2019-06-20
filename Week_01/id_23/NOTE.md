@@ -59,6 +59,10 @@
 
 ## 二分查找
 - 简单：https://leetcode-cn.com/problems/arranging-coins/
+> 思路：依次减去第k行的硬币数并计数，直到不够减为止。
+>
+> 题解：TODO
+
 - 中等：https://leetcode-cn.com/problems/powx-n/
 - 困难：https://leetcode-cn.com/problems/dungeon-game/
 
