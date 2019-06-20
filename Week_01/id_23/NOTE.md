@@ -72,6 +72,10 @@
 
 ## 递归
 - 简单：https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/
+> 思路：DFS/BFS
+> 
+> 题解：TODO
+
 - 简单：https://leetcode-cn.com/problems/symmetric-tree/
 - 简单：https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/
 - 简单：https://leetcode-cn.com/problems/minimum-distance-between-bst-nodes/
