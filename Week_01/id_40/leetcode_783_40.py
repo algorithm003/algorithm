@@ -5,6 +5,8 @@
 from typing import List
 
 # Definition for a binary tree node.
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -16,23 +18,23 @@ class TreeNode:
 # 时间复杂度: O(n)
 # 空间复杂度: O(n)
 
+
 class Solution:
 
-    def _minDiffInBST(self, root: TreeNode,l:List[int]) -> int:
+    def _minDiffInBST(self, root: TreeNode, l: List[int]) -> int:
         if not root:
             return
-        
-        self._minDiffInBST(root.left,l)
+
+        self._minDiffInBST(root.left, l)
         l.append(root.val)
-        self._minDiffInBST(root.right,l)
-        
+        self._minDiffInBST(root.right, l)
+
     def minDiffInBST(self, root: TreeNode) -> int:
-        l=[]
-        self._minDiffInBST(root,l)
+        l = []
+        self._minDiffInBST(root, l)
         m = l[1]-l[0]
-        if len(l)>2:
-            for i,v in enumerate(l[2:]):
-                if v - l[i+1]< m:
+        if len(l) > 2:
+            for i, v in enumerate(l[2:]):
+                if v - l[i+1] < m:
                     m = v-l[i+1]
         return m
-
