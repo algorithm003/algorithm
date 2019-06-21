@@ -81,7 +81,7 @@ def lower_bound(self, arr: List[int], target: int):
 上界：
 
 ```python
-def lower_bound(self, arr: List[int], target: int):
+def upper_bound(self, arr: List[int], target: int):
     l, r = 0, len(arr)-1
     while (l < r):
         mid = l + int(( r - l ) / 2)
@@ -106,13 +106,15 @@ def lower_bound(self, arr: List[int], target: int):
 
 ```python
 class Solution:
-    def lower_bound(self, arr: List[int], target: int):
-        l, r = 0, len(arr) - 1
-        while (l < r):
-            mid = l + int((r - l) / 2)
-            if arr[mid] <= target:
+    def arrangeCoins(self, n: int) -> int:
+        # 从 0 到 n 查找一个最大值 k,使得 k * (k + 1) / 2 <= n 成立
+        l, r = 0, n + 1
+        while l < r:
+            mid = int(l + (r - l) / 2)
+            if mid * (mid + 1) / 2 <= n:
                 l = mid + 1
             else:
                 r = mid
         return l - 1
+
 ```
