@@ -7,15 +7,6 @@
 
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
-        length = []
-        
-        def recur(root:TreeNode, dep:int)->int:
-            if root== None:
-                length.append(dep)
-                return
-            recur(root.left,dep+1)
-            recur(root.right,dep+1)
-                
-        recur(root,0)
-        return max(length)
-        
+        if root == None:
+            return 0
+        return max([self.maxDepth(root.left), self.maxDepth(root.right)])+1
