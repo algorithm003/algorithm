@@ -8,6 +8,9 @@ import (
 174. 地下城游戏
 */
 
+/**
+广度搜索
+*/
 func calculateMinimumHP1(dungeon [][]int) int {
 	xLen, yLen := len(dungeon)-1, len(dungeon[0])-1
 

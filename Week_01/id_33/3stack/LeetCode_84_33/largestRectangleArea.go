@@ -47,6 +47,6 @@ func max(a, b int) int {
 }
 
 func main() {
-	//fmt.Println(largestRectangleArea([]int{2, 1, 5, 6, 2, 3}))
+	//fmt.Println(LeetCode_84_33([]int{2, 1, 5, 6, 2, 3}))
 	fmt.Println(largestRectangleArea([]int{4, 2, 0, 3, 2, 5}))
 }
