@@ -1,5 +1,13 @@
 # 第一周总结
 
+## 数据结构和算法脑图
+
+![image](https://github.com/imchangchang/algorithm/blob/master/Week_01/id_17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95.png)
+
+------
+
+## 总结
+
 第一周我体会最深的就是自己基本功还差得远，以及我压根没把自己当职业选手。
 
 基本功一方面体现在语言使用上，我自己的python熟练度不如c高，实现的时候有时候会因为语言问题卡住；另一方面体现在对数据结构一些基础特性不熟悉上面，尤其是二维的tree，有些简单的事情要想半天才能反应过来。这个严重影响了自己学习和理解算法的速度。
@@ -14,4 +22,3 @@
 
 这个也不用多说了，重复练习吧，同一个点要反复拿出来打磨。
 
-![image](https://github.com/imchangchang/algorithm/blob/master/Week_01/id_17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95.png)
