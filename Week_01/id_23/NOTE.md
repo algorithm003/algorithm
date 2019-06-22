@@ -87,6 +87,10 @@
 > 题解：TODO
 
 - 简单：https://leetcode-cn.com/problems/minimum-distance-between-bst-nodes/
+> 思路：一种思路是采用中序遍历的方法得到有序的序列，再依次比较相邻两个元素的差值，并记录最小差值；
+>
+> 题解：TODO
+
 - 简单：https://leetcode-cn.com/problems/binary-tree-paths/
 > 思路：BFS/DFS
 > 
