@@ -14,3 +14,4 @@
 
 这个也不用多说了，重复练习吧，同一个点要反复拿出来打磨。
 
+![image](https://github.com/imchangchang/algorithm/blob/master/Week_01/id_17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95.png)
