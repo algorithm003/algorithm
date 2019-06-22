@@ -102,3 +102,6 @@
 > 题解：TODO
 
 - 中等：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
+> 思路：采用DFS找到包含两个节点的路径，比较两个节点的路径，找到路径中最后一个公共的节点；
+> 
+> 题解：TODO
