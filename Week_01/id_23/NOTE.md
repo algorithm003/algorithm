@@ -97,4 +97,8 @@
 > 题解：TODO
 
 - 简单：https://leetcode-cn.com/problems/range-sum-of-bst/
+> 思路：采用中序遍历的方法得到有序序列，再将范围内的指累加；
+> 
+> 题解：TODO
+
 - 中等：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
