@@ -77,6 +77,10 @@
 > 题解：TODO
 
 - 简单：https://leetcode-cn.com/problems/symmetric-tree/
+> 思路：最直接的想法是采用BFS算法来做，但提交了好几遍发现有很多case都会失败，后来参考了题解中的方法。
+> 
+> 题解：TODO
+
 - 简单：https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/
 > 思路：BFS/DFS
 > 
