@@ -84,5 +84,9 @@
 
 - 简单：https://leetcode-cn.com/problems/minimum-distance-between-bst-nodes/
 - 简单：https://leetcode-cn.com/problems/binary-tree-paths/
+> 思路：BFS/DFS
+> 
+> 题解：TODO
+
 - 简单：https://leetcode-cn.com/problems/range-sum-of-bst/
 - 中等：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
