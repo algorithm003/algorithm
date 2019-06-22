@@ -78,6 +78,10 @@
 
 - 简单：https://leetcode-cn.com/problems/symmetric-tree/
 - 简单：https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/
+> 思路：BFS/DFS
+> 
+> 题解：TODO
+
 - 简单：https://leetcode-cn.com/problems/minimum-distance-between-bst-nodes/
 - 简单：https://leetcode-cn.com/problems/binary-tree-paths/
 - 简单：https://leetcode-cn.com/problems/range-sum-of-bst/
