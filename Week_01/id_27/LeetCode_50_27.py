@@ -5,7 +5,7 @@ class Solution:
     即myPow(x*x, n/2)
     主要该题还需要注意其他的n的情况，需要分别考虑
     '''
-    
+
     def myPow(self, x: float, n: int) -> float:
         if n == 0:
             return 1
