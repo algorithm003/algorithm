@@ -35,6 +35,8 @@
 > 思路：这道题通过栈可以获取到需要删除的外层括号的位置，再将无需删除的串拼接起来即可。
 
 - 困难：https://leetcode.com/problems/largest-rectangle-in-histogram/
+> 思路：最容易想到的是暴力求解法，遍历每个下标，计算从该下标出发的最大面积，最终得到所有矩形的最大面积；而使用栈的思路不好想到，只能参考题解来做。
+
 - 困难：https://leetcode.com/problems/trapping-rain-water/
 
 ## 二分查找
