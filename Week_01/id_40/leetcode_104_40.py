@@ -16,7 +16,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
-class Solution:
+class Solution1:
     
     def maxDepth(self, root: TreeNode) -> int:
         if root is None:
@@ -26,4 +26,24 @@ class Solution:
         rd = self.maxDepth(root.right)
         return max(ld,rd)+1
         
+# 思路 2:迭代法
+# 用栈进行深度优先遍历, 保存栈的深度技巧是将节点与深度值**绑定在一起**压到栈中
+
+class Solution2:
+    def maxDepth(self, root: TreeNode) -> int:
+        if not root:
+            return 0
         
+        
+        s = [(root,1)]
+        maxd = 0
+        while s:
+            node,curd = s.pop()
+            if curd>maxd:
+                maxd = curd
+            if node.right:
+                s.append((node.right,curd+1))
+            if node.left:
+                s.append((node.left,curd+1))
+                
+        return maxd
