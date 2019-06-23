@@ -18,31 +18,22 @@ import java.util.*;
  */
 public class LeetCode49 {
 
-    public static void main(String[] args) {
-        String[] str = {"eat", "tea", "tan", "ate", "nat", "bat"};
-         groupAnagrams(str).forEach((k,v)->{
-             for (String s :
-                     v) {
-                 System.out.println(s);
-
-             }
-         });
-
-    }
-
-    public static Map<String ,List<String>> groupAnagrams(String[] strs){
-        Map<String,List<String>> hashMap = new HashMap<>();
+   
+    public List<List<String>> groupAnagrams(String[] strs) {
+          Map<String,List<String>> hashMap = new HashMap<>();
         for (String s : strs ) {
 
             char[] chars = s.toCharArray();
             Arrays.sort(chars);
 
-            hashMap.putIfAbsent(String.valueOf(chars),new ArrayList<>());
-            hashMap.get(String.valueOf(chars)).add(s);
-
+            if(!hashMap.containsKey(String.valueOf(chars))){
+                List<String> tempList = new ArrayList<>();
+                tempList.add(s);
+                hashMap.put(String.valueOf(chars),tempList);
+            }else {
+                hashMap.get(String.valueOf(chars)).add(s);
+            }
         }
-
-        return hashMap;
-
+        return new ArrayList(hashMap.values());
     }
 }
