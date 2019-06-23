@@ -38,6 +38,7 @@
 > 思路：最容易想到的是暴力求解法，遍历每个下标，计算从该下标出发的最大面积，最终得到所有矩形的最大面积；而使用栈的思路不好想到，只能参考题解来做。
 
 - 困难：https://leetcode.com/problems/trapping-rain-water/
+> 思路：参考题解
 
 ## 二分查找
 - 简单：https://leetcode-cn.com/problems/arranging-coins/
