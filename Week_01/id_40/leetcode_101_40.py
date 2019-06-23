@@ -15,7 +15,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
-class Solution:
+class Solution1:
     
     def isMirror(self, left: TreeNode,right:TreeNode)->bool:
         if not left and not right:
@@ -29,11 +29,38 @@ class Solution:
             return True
         
         return self.isMirror(root.left,root.right)
-        
-        
-        
-        
-        
-        
+    
+# 思路 2:迭代法
+# 借助栈实现深度优先遍历.由于是镜面比较,所以务必注意在两棵树压栈的顺序是相反的
+# 时间复杂度: O(n)
+# 空间复杂度: O(n)
 
-            
+class Solution2:
+    def isMirror(self, root1: TreeNode, root2: TreeNode):
+
+        s1, s2 = [root1], [root2]
+        while s1 and s2:
+            n1 = s1.pop()
+            n2 = s2.pop()
+
+            # 均为空 是对称
+            if not n1 and not n2:
+                continue
+
+            # 存在一个为空 则不对称
+            if not n1 or not n2:
+                return False
+
+            if n1.val != n2.val:
+                return False
+
+            s1.append(n1.right)
+            s1.append(n1.left)
+
+            s2.append(n2.left)
+            s2.append(n2.right)
+
+        return True
+
+    def isSymmetric(self, root: TreeNode) -> bool:
+        return self.isMirror(root, root)
