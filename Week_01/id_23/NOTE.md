@@ -47,6 +47,7 @@
 > 思路：将x^n转换为(x/2)^n^2，再处理下n为负数及奇数的情况。
 
 - 困难：https://leetcode-cn.com/problems/dungeon-game/
+> 思路：采用动态规划
 
 ## 递归
 - 简单：https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/
