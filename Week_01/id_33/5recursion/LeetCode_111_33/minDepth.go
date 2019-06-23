@@ -15,7 +15,7 @@ type TreeNode struct {
 /**
 广度搜索
 */
-func minDepth(root *TreeNode) int {
+func minDepth1(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
@@ -45,11 +45,41 @@ func minDepth(root *TreeNode) int {
 	return flag
 }
 
+/**
+深度搜索
+*/
+func minDepth(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
+	leftNode := root.Left
+	rightNode := root.Right
+	if leftNode == nil && rightNode == nil {
+		return 1
+	}
+
+	if leftNode == nil {
+		return minDepth(rightNode) + 1
+	} else if rightNode == nil {
+		return minDepth(leftNode) + 1
+	} else {
+		return min(minDepth(leftNode), minDepth(rightNode)) + 1
+	}
+}
+
+func min(a, b int) int {
+	if a > b {
+		return b
+	}
+	return a
+}
+
 func main() {
 	root := &TreeNode{Val: 1}
 	root.Left = &TreeNode{Val: 2}
 	root.Right = &TreeNode{Val: 3}
 	root.Right.Left = &TreeNode{Val: 4}
+	root.Right.Right = &TreeNode{Val: 5}
 
 	fmt.Println(minDepth(root))
 }
