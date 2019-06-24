@@ -75,29 +75,3 @@ func main() {
 
 	fmt.Println(maxDepth(root))
 }
-
-func toTree(nums []int) *TreeNode {
-	root := &TreeNode{}
-	root.Val = nums[0]
-
-	var list []*TreeNode
-	list = append(list, root)
-	index := 0
-	for len(list) > 0 {
-		for i := len(list); i > 0; i-- {
-			node := list[0]
-			list = list[1:]
-			if index+2 < len(nums) {
-				index++
-				node.Left = &TreeNode{Val: nums[index]}
-				index++
-				node.Right = &TreeNode{Val: nums[index]}
-				list = append(list, node.Left, node.Right)
-			} else {
-				break
-			}
-		}
-	}
-
-	return root
-}
