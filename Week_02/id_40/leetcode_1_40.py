@@ -3,6 +3,8 @@
 # 时间复杂度:O(n)
 # 空间复杂度:O(n)
 
+from typing import List
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         _dic = {}
