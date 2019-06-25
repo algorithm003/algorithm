@@ -2,7 +2,6 @@ class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
         if not root:
             return []
-
         stack, res, temp, flag = [root], [], [], 1
         while stack:
             for i in range(len(stack)):
@@ -16,5 +15,4 @@ class Solution:
             res.append(temp[::flag])
             temp = []
             flag *= -1
-
         return res
