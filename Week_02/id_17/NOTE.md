@@ -16,3 +16,10 @@ _reference：Data Structures and Algorightm Analysis in C_
 3. Design rule：设计法则，假设所以的递归调用都能运行
 4. Compound intereset rule：合成效益法则，求解一个问题的同一个实例的时，切勿在不同的递归调用中做重复性工作
 
+对应到超哥讲的递归模板：
+* terminator  ->  base cases
+* process logic and drill down -> makeing progress
+* reverse status：只是处理前面process logic造成的副作用
+
+#### 超哥：不要人肉递归 -> Making rule（设计法则）
+Making rule是一条很重要的法则，因为它意味着，当设计递归调用的程序的时候一般没有必要知道数据保存的细节，也不需要跟踪大量的递归调用。
