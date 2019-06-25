@@ -1,3 +1,9 @@
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
 class Solution:
     '''
     使用前序遍历的方式递归去查找，当找到一个结点后，就不再向下寻找，直接返回当前结点。
@@ -16,3 +22,10 @@ class Solution:
         if left and right:
             return root
         return left or right
+
+
+
+if __name__ == "__main__":
+    a = Solution()
+    b = a.lowestCommonAncestor([3,5,1,6,2,0,8,None,None,7,4], 5, 1)
+    print(b)
