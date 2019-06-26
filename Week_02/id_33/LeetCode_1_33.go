@@ -1,3 +1,5 @@
+//+build ignores
+
 package main
 
 import "fmt"

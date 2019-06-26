@@ -1,6 +1,6 @@
-package main
+//+build ignores
 
-import "fmt"
+package main
 
 /**
 3. 无重复字符的最长子串
