@@ -76,7 +76,7 @@ var levelOrder = function(root) {
   let queue = [];
   let level = 0;
   queue.push(root);
-  
+
   // 1. terminate
   while (queue.length > 0) {
     res[level] = [];
@@ -85,7 +85,7 @@ var levelOrder = function(root) {
       let node = queue.shift();
       res[level].push(node.val);
       // 3. drill down
-      if (node.left) { queue.push(node.left) } 
+      if (node.left) { queue.push(node.left) }
       if (node.right) { queue.push(node.right); }
     }
     level++;

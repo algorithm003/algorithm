@@ -11,7 +11,7 @@
         - 当 n>1 时，其余结点可被分成m(m>0)个互不相交的有限集合,每个集合都是一棵树，并且称为根(root)的子树;
 - 树的相关概念：
     - 结点的度: 结点所拥有子树的数目;
-    - 结点关系: 
+    - 结点关系:
         - 孩子结点: 某结点子树的根节点;
         - 双亲结点: 某结点对于其子树;
         - 兄弟结点: 同一个双亲结点的孩子结点们;
@@ -88,10 +88,10 @@
             // 2. process
             res.push(node.val);                                         // 根
 
-            // 3. drill down                                            
+            // 3. drill down
             if (node.left !== null) recursion(node.left, res);          // 左
             if (node.right !== null) recursion(node.right, res);        // 右
-            
+
             // 4.  recover
         }
         ```
@@ -189,13 +189,13 @@
         function recursion (node, res) {
             // 1. terminator
             //if (!node || node.val===null) return;         // 旧.
-            
+
             // 2. process
             // 3. drill down
             if (node.left !== null) recursion(node.left, res);          // 左
             res.push(node.val);                                         // 根
             if (node.right !== null) recursion(node.right, res);        // 右
-            
+
             // 4. recover
         }
         ```
@@ -203,7 +203,7 @@
     - 思路: 用栈辅助存储未处理的值,每个节点加上标志位flag,标志位的作用是标志节点的身份是否为处理完成的节点.
     - 复杂度分析:
         - 时间: O(n). 耗时点在于每个结点会经历两次遍历(塞入->弹出->标记->塞入->弹出)，也就是时间复杂度是O(2n);
-        - 空间: O(n). 分析同上. 
+        - 空间: O(n). 分析同上.
     - Leetcode 结果:
         - 执行用时 : 84ms, 在所有 JavaScript 提交中击败了  78.76%的用户
         - 内存消耗 : 33.4MB, 在所有 JavaScript 提交中击败  93.28%的用户
@@ -292,13 +292,13 @@
         function recursion (node, res) {
             // 1. terminator
             //if (!node || node.val===null) return;         // 旧.
-            
+
             // 2. process
             // 3. drill down
             if (node.left !== null) recursion(node.left, res);          // 左
             if (node.right !== null) recursion(node.right, res);        // 右
             res.push(node.val);                                         // 根
-            
+
             // 4. recover
         }
         ```
@@ -351,14 +351,14 @@
                 let res = [];
                 let stack = [];
                 stack.push(root);
-                
+
                 while (stack.length>0) {
                     let node = stack.pop();
                     if (node.left) stack.push(node.left);
                     if (node.right) stack.push(node.right);
                     res.push(node.val);
                 }
-                
+
                 return res.reverse();
             };
             ```
@@ -370,7 +370,7 @@
     - [ ] Leetcode其他解法学习
 - 难度: medium
 - 题意解析: 自顶向下逐层遍历并放入数组
-- 初始思路: 递归法. 
+- 初始思路: 递归法.
     - 思路: 每层加上level做标记。某level第一次出现创建数组并插入res, 同level数值放入同一数组。
     - 复杂度:
         - 时间: 等同二叉树节点个数，故为 O(n)
@@ -402,8 +402,8 @@
 - 第二思路: 模板状态迭代法
     - 思路: 给节点加上level开始迭代.
     - 复杂度分析:
-        - 时间: O(n). 
-        - 空间: O(n). 
+        - 时间: O(n).
+        - 空间: O(n).
     - Leetcode 结果:
         - 执行用时 : 88ms, 在所有 JavaScript 提交中击败了  76.21%的用户
         - 内存消耗 : 35.3 MB, 在所有 JavaScript 提交中击败  5.47%的用户
@@ -447,7 +447,7 @@
             let queue = [];
             let level = 0;
             queue.push(root);
-            
+
             // 1. terminate
             while (queue.length > 0) {
                 res[level] = [];
@@ -456,7 +456,7 @@
                     let node = queue.shift();
                     res[level].push(node.val);
                     // 3. drill down
-                    if (node.left) { queue.push(node.left) } 
+                    if (node.left) { queue.push(node.left) }
                     if (node.right) { queue.push(node.right); }
                 }
                 level++;
@@ -491,7 +491,7 @@
             if (root.left) invertTree(root.left);
             if (root.right) invertTree(root.right);
             // 4. recover
-            
+
             return root;
         };
         ```
@@ -509,7 +509,7 @@
             if (!root || root.val===null) return root;
             let stack = [];
             stack.push(root);
-            
+
             //  1. terminate
             while (stack.length > 0) {
                 let node = stack.pop();
@@ -551,10 +551,10 @@
         };
         ```
 - 第二思路: 迭代法。
-    - 思路: 用栈存储{node: node, level: level}对象, 
+    - 思路: 用栈存储{node: node, level: level}对象,
     - 复杂度分析:
-        - 时间: 
-        - 空间: 
+        - 时间:
+        - 空间:
     - Leetcode 结果:
         - 执行用时 : ms, 在所有 JavaScript 提交中击败了  %的用户
         - 内存消耗 : MB, 在所有 JavaScript 提交中击败  %的用户
@@ -607,13 +607,13 @@
                 let node = stack.pop();
                 let level = node.level;
                 if (node.left || node.right) {
-                    if (node.right) { 
+                    if (node.right) {
                         node.right.level = level + 1;
-                        stack.push(node.right); 
+                        stack.push(node.right);
                     }
                     if (node.left) {
                         node.left.level = level + 1;
-                        stack.push(node.left); 
+                        stack.push(node.left);
                     }
                 } else {
                     res = Math.min(res, level);
@@ -657,18 +657,18 @@
                 if (arr[0] < node.val) {
                     arr[0] = node.val;
                     return recursion(node.right, arr);
-                }        
+                }
             }
             // 4.recover
-            
+
             return false;
         }
         ```
 - 第二思路:
     - 思路:
     - 复杂度分析:
-        - 时间: 
-        - 空间: 
+        - 时间:
+        - 空间:
     - Leetcode 结果:
         - 执行用时 : ms, 在所有 JavaScript 提交中击败了  %的用户
         - 内存消耗 : MB, 在所有 JavaScript 提交中击败  %的用户
@@ -697,12 +697,14 @@
         var lowestCommonAncestor = function(root, p, q) {
             // 1. terminate
             if (!root || root.val===p.val || root.val===q.val) return root;
-            
+
             // 3. drill down
             let left = lowestCommonAncestor(root.left, p, q);
             let right = lowestCommonAncestor(root.right, p, q);
-            
+
             // 2. process
+
+            // 优化下面的代码
             if (left != null && right != null) {
                 return root;
             } else if (left != null) {
@@ -716,8 +718,8 @@
 - 第二思路:
     - 思路:
     - 复杂度分析:
-        - 时间: 
-        - 空间: 
+        - 时间:
+        - 空间:
     - Leetcode 结果:
         - 执行用时 : ms, 在所有 JavaScript 提交中击败了  %的用户
         - 内存消耗 : MB, 在所有 JavaScript 提交中击败  %的用户

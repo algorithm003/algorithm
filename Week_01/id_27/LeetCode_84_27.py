@@ -25,3 +25,8 @@ class Solution:
             statck.append(i)
         heights.pop()
         return area
+
+
+
+
+# statck ??? typo

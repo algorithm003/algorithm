@@ -1,3 +1,5 @@
+# 非常好！！ 100 perfect
+
 """
     @author: Merlin 2019.06.23
     15.Three Sum
@@ -34,7 +36,7 @@ class Solution_2:
             return []
         res = []
         nums.sort()
-        for i in range(len(nums)-2):
+        for i in range(len(nums) - 2):
             if i > 0 and nums[i] == nums[i-1]:
                 continue
             l, r = i+1, len(nums)-1

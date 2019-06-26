@@ -24,8 +24,7 @@ public class LeetCode021 {
                 if (cur1 == null) {
                     curPointer = cur2;
                     cur2 = cur2.next;
-                }
-                else {
+                } else {
                     curPointer = cur1;
                     cur1 = cur1.next;
                 }

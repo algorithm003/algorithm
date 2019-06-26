@@ -1,20 +1,20 @@
-//给定一个二叉树，找出其最小深度。 
+//给定一个二叉树，找出其最小深度。
 //
-// 最小深度是从根节点到最近叶子节点的最短路径上的节点数量。 
+// 最小深度是从根节点到最近叶子节点的最短路径上的节点数量。
 //
-// 说明: 叶子节点是指没有子节点的节点。 
+// 说明: 叶子节点是指没有子节点的节点。
 //
-// 示例: 
+// 示例:
 //
-// 给定二叉树 [3,9,20,null,null,15,7], 
+// 给定二叉树 [3,9,20,null,null,15,7],
 //
 //     3
 //   / \
 //  9  20
 //    /  \
-//   15   7 
+//   15   7
 //
-// 返回它的最小深度 2. 
+// 返回它的最小深度 2.
 //
 
 /**
@@ -31,10 +31,10 @@ class Solution111 {
         if (root == null) return 0;
         if (root.left == null && root.right == null) return 1;
         int left, right;
-        if (root.left != null) left = minDepth(root.left);
-        else left = Integer.MAX_VALUE;
-        if (root.right != null) right = minDepth(root.right);
-        else right = Integer.MAX_VALUE;
+
+        left =  root.left != null ?  minDepth(root.left) : Integer.MAX_VALUE;
+        right = root.right != null ? minDepth(root.right) : Integer.MAX_VALUE;
+
         return Math.min(left, right) + 1;
     }
 
@@ -44,3 +44,5 @@ class Solution111 {
         solution111.minDepth(root);
     }
 }
+
+// 代码还是不够简洁！

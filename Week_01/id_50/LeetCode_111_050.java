@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -21,23 +22,26 @@ public class LeetCode_111_050 {
 	}
 
 	public int minDepth(TreeNode root) {
-        if(root == null){
+        if (root == null){
 			return 0;
-		}else{
-			if(root.left == null && root.right == null){
-				return 1;
-			}
-			int min_val = Integer.MAX_VALUE;
-			if(root.left != null){
-				int left = minDepth(root.left);
-				min_val = Math.min(left, min_val);
-				
-			}
-			if(root.right != null){
-				int right = minDepth(root.right);
-				min_val = Math.min(right, min_val);
-			}
-			return min_val+1;
 		}
+
+		if(root.left == null && root.right == null){
+			return 1;
+		}
+		int min_val = Integer.MAX_VALUE;
+		if(root.left != null){
+			int left = minDepth(root.left);
+			min_val = Math.min(left, min_val);
+
+		}
+		if(root.right != null){
+			int right = minDepth(root.right);
+			min_val = Math.min(right, min_val);
+		}
+		return min_val+1;
+
     }
 }
+
+// 代码长度和冗余的复杂度有点过高

@@ -18,6 +18,8 @@ using namespace std;
  * 所以返回 [0, 1]
  */
 
+ // QC: 优化你的代码
+
 namespace version_1
 {
     /*使用map*/

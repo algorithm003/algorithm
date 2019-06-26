@@ -14,6 +14,8 @@ public class LeetCode_103_16 {
         queue.add(root);
         boolean isReverse = false;
         while (!queue.isEmpty()) {
+
+            // QC: List<Integer>
             LinkedList<Integer> oneLevel = new LinkedList<Integer>();
             int len = queue.size();
             for (int i = 0; i < len; i ++) {

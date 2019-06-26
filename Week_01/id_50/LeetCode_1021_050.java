@@ -49,7 +49,7 @@ public class LeetCode_1021_050 {
 					}
 					stack.pop();
 				}else{
-					stack.add(charArr[i]);					
+					stack.add(charArr[i]);
 				}
 			}
 			for(int i=0; i<charArr.length; i++){
@@ -60,3 +60,5 @@ public class LeetCode_1021_050 {
 			return strBuild.toString();
 	    }
 }
+
+// 代码太复杂，冗余！

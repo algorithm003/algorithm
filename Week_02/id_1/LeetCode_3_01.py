@@ -15,7 +15,7 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         if not s: return 0
         dic = {}
-        start ,lens = 0, 0 
+        start ,lens = 0, 0
         for i,val in enumerate(s):
             if val not in dic:
                 dic[val] = i
@@ -25,7 +25,7 @@ class Solution:
                 dic[val] = i
             if i - start + 1 > lens:
                 lens = i - start + 1
-        return lens	         
+        return lens
 
 
 #优化：可以把更新初始标志位的判定合并，同步更新子串长度；
@@ -40,3 +40,7 @@ class Solution:
                 lens = max(lens, i - start + 1)
             dic[val] = i
         return lens
+
+
+QC:
+写得非常好，代码基本没有瑕疵

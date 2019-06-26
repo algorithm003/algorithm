@@ -30,32 +30,30 @@ public:
         }
 
         //利用二叉搜索树的性质。大于右值，搜左子树。
-        if (root->val > q->val)
-        {
+        if (root->val > q->val) {
             left = lowestCommonAncestor(root->left, p, q);
         }
 
         //利用二叉搜索树的性质。小于左值，搜右子树。
-        if (root->val < p->val)
-        {
+        if (root->val < p->val) {
             right = lowestCommonAncestor(root->right, p, q);
         }
 
-        if (left==NULL)
-        {
+        // QC: 代码优化
+        if (left==NULL) {
             //左空，则返回右子树。
             return right;
-        }
-        else if (right==NULL)
-        {
+        } else if (right==NULL) {
             //左不空，右空，则返左子树
             return left;
-        } else{
+        } else {
             //左右不空，则返回当前根结点。
             return root;
         }
     }
 };
+
+// QC: 总体上代码需要简化
 
 
 int main() {

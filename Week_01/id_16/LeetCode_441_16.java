@@ -6,7 +6,7 @@ public class LeetCode441 {
 
         int row = 1;
 
-        while(n >= row) {
+        while (n >= row) {
             n = n - row;
             row ++;
         }

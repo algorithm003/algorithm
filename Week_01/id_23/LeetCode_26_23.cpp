@@ -4,17 +4,17 @@ public:
         if (nums.size() <= 1) {
             return nums.size();
         }
-        
+
         int newArrEndIndex = 0;
         for (int i = 1; i < nums.size(); ++i) {
             if (nums[i] != nums[newArrEndIndex]) {
                 nums[++newArrEndIndex] = nums[i];
             }
         }
-        
+
         return newArrEndIndex + 1;
     }
-    
+
     // good answers from others
     int removeDuplicates(vector<int>& nums) {
         int i = 0;
@@ -24,3 +24,6 @@ public:
         return i;
     }
 };
+
+
+// nice !

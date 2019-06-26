@@ -10,7 +10,7 @@
 
 
 ## 递归的四个基本法则
-_reference：Data Structures and Algorightm Analysis in C_  
+_reference：Data Structures and Algorightm Analysis in C_
 1. Base cases：基本情形，无须递归就可以轻松解出
 2. Making progress：不断推进，每次递归调用都能向着base cases推进
 3. Design rule：设计法则，假设所以的递归调用都能运行
@@ -23,3 +23,8 @@ _reference：Data Structures and Algorightm Analysis in C_
 
 #### 超哥：不要人肉递归 -> Making rule（设计法则）
 Making rule是一条很重要的法则，因为它意味着，当设计递归调用的程序的时候一般没有必要知道数据保存的细节，也不需要跟踪大量的递归调用。
+
+
+
+## QC
+非常好的总结！

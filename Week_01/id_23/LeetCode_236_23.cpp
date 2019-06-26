@@ -16,19 +16,19 @@ public:
             }
             break;
         }
-        
+
         return node;
     }
-    
+
     TreeNode* dfs(TreeNode *root, vector<TreeNode*> &path, TreeNode* target) {
         if (root == target) {
             return root;
         }
-        
+
         if (root == NULL) {
             return NULL;
         }
-        
+
         if (root->left != NULL) {
             path.push_back(root->left);
             TreeNode *res = dfs(root->left, path, target);
@@ -43,7 +43,10 @@ public:
                 return res;
             path.pop_back();
         }
-        
+
         return NULL;
     }
 };
+
+
+// 代码冗长，可以进一步简化代码

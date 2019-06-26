@@ -16,6 +16,7 @@ public class LeetCode088 {
         int index2 = n - 1;
         int i = m + n - 1;
 
+        // 关于 do-while 的使用 ?..
         do {
             if (index2 < 0 || (index1 >= 0 && nums1[index1] >= nums2[index2])) {
                 nums1[i] = nums1[index1];

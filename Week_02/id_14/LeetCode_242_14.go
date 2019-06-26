@@ -61,3 +61,6 @@ func isAnagram(s string, t string) bool {
 	return true
 
 }
+
+
+// QC：代码写得很不错！

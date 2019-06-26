@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// QC: 系统里没有类似的？
 func max(x, y int) int {
 	if x > y {
 		return x

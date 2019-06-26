@@ -1,4 +1,7 @@
+
 class Solution:
+
+
 
     '''
     求x^n的结果，可以用二分法来解决该问题，如2的10次方可以转换为4的5次方来计算，从而达到减少时间复杂度的目的
@@ -15,3 +18,7 @@ class Solution:
             return x * self.myPow(x, n - 1)
         else:
             return self.myPow(x*x, n / 2)
+
+
+# 三目运算符
+# 希望能试试用 二进制位 的形式来实现

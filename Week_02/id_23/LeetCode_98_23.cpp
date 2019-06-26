@@ -3,7 +3,7 @@ public:
     bool isValidBST(TreeNode* root) {
         return isValidBST(root, NULL, NULL);
     }
-    
+
     bool isValidBST(TreeNode *root, TreeNode *min, TreeNode *max) {
         if (!root)
             return true;
@@ -32,3 +32,5 @@ private:
     TreeNode *prev = NULL;
 };
 
+
+// QC: 代码很不错！！！

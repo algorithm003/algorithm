@@ -1,4 +1,5 @@
 public class LeetCode026 {
+
     public int removeDuplicates(int[] nums) {
         //checking
         if (nums == null || nums.length ==0) {

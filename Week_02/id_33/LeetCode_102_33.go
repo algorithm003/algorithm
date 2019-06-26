@@ -54,7 +54,10 @@ func levelOrder1(root *TreeNode) [][]int {
 
 	for len(list) > 0 {
 		var nums []int
+
+		// QC: 这里需要优化
 		for i := len(list); i > 0; i-- {
+			// QC: 这里需要优化
 			node := list[0]
 			list = list[1:]
 			nums = append(nums, node.Val)

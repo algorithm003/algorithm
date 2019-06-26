@@ -8,12 +8,12 @@ public class Solution {
 		if(s.length() != t.length()) {
 			return false;
 		}
-		
+
 		// init an empty array with 26 zeros in side
 		int[] temp = new int[26];
-		
+
 		for (int i = 0; i < s.length(); i++) {
-			// minus 'a' means: get the rank in alphabetic list 
+			// minus 'a' means: get the rank in alphabetic list
 			// 'z' - 'a' is 25 means from a to z there are 25 letters
 			// fill the position of s in alphabetic +1
 			temp[s.charAt(i) - 'a']++;
@@ -21,9 +21,9 @@ public class Solution {
 			// make the value to 0
 			// else to -1, if any father letters in s will take this position
 			// the value will back to 0
-			temp[t.charAt(i) - 'a']--;
+			temp[t[i] - 'a']--;
 		}
-		
+
 		// if all the value in temp back to zero, t is an anagram of s
 		for(int i : temp) {
 			// the value grater than 0 means letters in s not in t
@@ -32,7 +32,7 @@ public class Solution {
 				return false;
 			}
 		}
-		
+
 		return true;
 	}
 

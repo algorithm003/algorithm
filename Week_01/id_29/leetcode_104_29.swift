@@ -9,16 +9,18 @@
 import Foundation
 
 class Solution {
-    
+
     /*
      思路：使用递归来实现 最大深度为左子树的最大深度 或者右子树的最大深度 中的最大值 + 1
      */
-    
+
     func maxDepth(_ root: TreeNode?) -> Int {
         if root == nil {
             return 0
-        }else{
+        } else {
             return max(maxDepth(root?.left), maxDepth(root?.right)) + 1
         }
+
+        // 建议直接用 三目运算符
     }
 }

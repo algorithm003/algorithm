@@ -11,6 +11,7 @@ public class LeetCode024 {
         ListNode tmp;
         ListNode pre = virtualHead;
 
+        // 可以更加简洁一点
         do {
             pre.next = p2;
             tmp = p2.next;

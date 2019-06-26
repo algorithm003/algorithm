@@ -19,15 +19,15 @@ public class TreeNode {
 }
 
 class Solution {
-    
+
     func midOrder(_ root:TreeNode?,_ orderList: inout [Int]) {
         if root == nil { return }
         midOrder(root?.left,&orderList)
         orderList.append(root!.val)
         midOrder(root?.right,&orderList)
     }
-    
-    
+
+
     func minDiffInBST(_ root: TreeNode?) -> Int {
         var orderList:[Int] = [Int]()
         midOrder(root,&orderList)
@@ -37,3 +37,5 @@ class Solution {
         }
     }
 }
+
+// 代码很好！

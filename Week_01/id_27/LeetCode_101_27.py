@@ -9,8 +9,13 @@ class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
         if not root:
             return True
+
         def dfs(l, r):
             if l and r:
                 return l.val == r.val and dfs(l.left, r.right) and dfs(l.right, r.left)
             return l == r
+
         return dfs(root.left, root.right)
+
+
+# 厉害！

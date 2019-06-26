@@ -81,3 +81,7 @@ func main() {
 	result := countOfAtoms(formula)
 	fmt.Println(result)
 }
+
+
+// 简化代码、 code redundancy
+

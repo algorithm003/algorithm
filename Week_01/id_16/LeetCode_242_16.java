@@ -46,3 +46,8 @@ public class LeetCode242 {
         return (map.size() == 0);
     }
 }
+
+
+// 代码太长；太冗余
+// map & set, default method
+// 这里看起来还是数据计数最为方便

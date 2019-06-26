@@ -13,11 +13,11 @@
 var lowestCommonAncestor = function(root, p, q) {
   // 1. terminate
   if (!root || root.val===p.val || root.val===q.val) return root;
-  
+
   // 3. drill down
   let left = lowestCommonAncestor(root.left, p, q);
   let right = lowestCommonAncestor(root.right, p, q);
-  
+
   // 2. process
   if (left != null && right != null) {
     return root;
@@ -28,3 +28,5 @@ var lowestCommonAncestor = function(root, p, q) {
   }
   return null;
 };
+
+// 练习使用三目运算符

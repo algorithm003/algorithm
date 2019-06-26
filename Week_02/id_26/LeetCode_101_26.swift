@@ -3,7 +3,7 @@ class Solution {
         guard let root = root else {
             return true
         }
-   
+
         var queue: [TreeNode?] = []
         queue.append(root.left)
         queue.append(root.right)
@@ -27,3 +27,6 @@ class Solution {
         return true
     }
 }
+
+
+// Swift 的两哥们一直代码水平很厉害

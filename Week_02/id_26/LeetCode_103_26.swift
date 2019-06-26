@@ -3,7 +3,7 @@ class Solution {
         guard let root = root else {
             return []
         }
-        
+
         var results: [[Int]] = []
         var queue: [TreeNode] = [root]
         // BFS
@@ -21,6 +21,8 @@ class Solution {
                     queue.append(rightNode)
                 }
             }
+
+            // QC: 建议能在 queue.prepend
             if level & 1 == 1{
                 levelList = levelList.reversed()
             }

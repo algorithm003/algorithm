@@ -2,7 +2,7 @@
     @author: Merlin 2019.06.27
     3.Longest Substring Without Repeating Characters
     思路: 用一个临时数组temp存储最长子串的每个元素，方法2是用哈希表来存储，有所区别
-    问题: Python中用in来查找item是否存在于temp中，这里的时间复杂度应该是O(len(temp))，所以算法的总时间复杂度应该是O(n * len(temp))对吗
+    问题: Python中用in来查找item是否存在于temp中，这里的时间复杂度应该是O(len(temp))，所以算法的总时间复杂度应该是O(n * len(temp))对吗：  对的！
     注: 如果超哥检查作业看到了，能否解答一下这个问题和Solution_2的问题
     time: O(n * len(temp)) space: O(len(temp)) 注: time和space未下定论
     资料reference: https://www.cnblogs.com/work115/archive/2016/06/23/5610680.html

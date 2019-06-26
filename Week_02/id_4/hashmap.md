@@ -47,7 +47,7 @@
             let temp = nums[i];
             if (map.has(temp)) {
                 return [map.get(temp), i]
-            } 
+            }
             map.set(target-temp, i);
         }
         return [];
@@ -113,15 +113,15 @@
         ``` js
         var isAnagram = function(s, t) {
             if (s.length !== t.length) return false;
-            
+
             let map = new Map();
             for (let i=0, len=s.length; i<len; i++) {
-                if (!map.has(s[i])) map.set(s[i], 0); 
+                if (!map.has(s[i])) map.set(s[i], 0);
                 map.set(s[i], map.get(s[i])+1);
                 if (!map.has(t[i])) map.set(t[i], 0);
                 map.set(t[i], map.get(t[i])-1);
             }
-            
+
             for (let [key, value] of map.entries()) {
                 if (value!==0) return false;
             }
@@ -135,7 +135,7 @@
     - [x] Hashmap 滑动窗口
 - 难度: medium
 - 题意解析: 找出某字符串中不含重复字符的"最长子串"的长度
-- 初始思路: 
+- 初始思路:
     - 思路: 用 max 存储最大长度，用 start不重复子串的存储开始位置，用 end 不断推进. 每次推进都判断是否出现重复，若出现则 start 等于**重复位置下标+1**.
     - 复杂度分析:
         - 时间: O(n^2). 遍历一次字符串复杂度为n,内部有indexOf查下标复杂度最好为1(全部字符重复)最坏为n(全部字符不重复)，故最好时间复杂度为 O(n),最坏为 O(n^2).
@@ -179,10 +179,14 @@
             for (let start=0, end=0, len=s.length; end<len; end++) {
                 if (map.has(s[end])) {
                     start = Math.max(map.get(s[end])+1, start);     // 用 Math.max 避免 start 回退
-                } 
+                }
                 map.set(s[end], end);
                 max = Math.max(max, end-start+1);
             }
             return max;
         };
         ```
+
+
+// 非常好！
+// 稍微注意下格式

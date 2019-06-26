@@ -53,8 +53,9 @@ public class LeetCode_103_003 {
             res.get(depth).add(0,root.val);
         }
 
-        helper(res,root.left,depth++);
-        helper(res,root.right,depth++);
+        helper(res, root.left,depth++);
+        helper(res, root.right,depth++);
     }
 
 }
+// 注意格式

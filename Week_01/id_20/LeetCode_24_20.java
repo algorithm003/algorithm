@@ -100,3 +100,5 @@ class Solution {
     }
 
 }
+
+// Good. 第一个方法还可以更加短一点。

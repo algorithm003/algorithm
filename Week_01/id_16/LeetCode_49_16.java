@@ -10,16 +10,19 @@ public class LeetCode049 {
         }
 
         HashMap<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>(strs.length);
+
+        // for (String str : strs) {}
         for (int i = 0; i < strs.length; i ++) {
             char[] strArray = strs[i].toCharArray();
             Arrays.sort(strArray);
             String sortedStr = new String(strArray);
+
+            // 冗余代码的处理
             if (!map.containsKey(sortedStr)) {
                 ArrayList<String> list = new ArrayList<String>();
                 list.add(strs[i]);
                 map.put(sortedStr, list);
-            }
-            else {
+            } else {
                 ArrayList<String> list = map.get(sortedStr);
                 list.add(strs[i]);
                 map.put(sortedStr, list);

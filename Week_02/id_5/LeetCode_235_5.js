@@ -72,6 +72,8 @@ var lowestCommonAncestor = function(root, p, q) {
   let parentVal = root.val
   let pVal = p.val
   let qVal = q.val
+
+  // 三目表达式
   if (pVal < parentVal && qVal < parentVal) {
     return lowestCommonAncestor(root.left, p, q)
   } else if (pVal > parentVal && qVal > parentVal) {

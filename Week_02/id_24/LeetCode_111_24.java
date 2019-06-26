@@ -8,20 +8,22 @@ public class Solution {
     public int minDepth(TreeNode root) {
     	return _minDepth(0, root);
     }
-    
+
     // Recursion
     private int _minDepth(int level, TreeNode root) {
     	if(root == null) return 0;
-    	
+
     	int left = _minDepth(level++, root.left);
     	int right = _minDepth(level++, root.right);
-    	
+
     	// When left or right min level is 0 that means it's a single branch tree or it's the leaf node
     	if(left == 0 || right == 0) {
-    		// count the higher branch level when each or the child level is 0 and continue.
+			// count the higher branch level when each or the child level is 0 and continue.
+
+			// QC: neat!! 厉害
     		return left + right + 1;
     	}
-    	
+
     	return Math.min(left, right) + 1;
     }
 

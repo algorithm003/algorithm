@@ -20,7 +20,7 @@ class Solution_1:
         if not root:
             return []
         levels = []
-        
+
         def getLevel(node, level):
             if len(levels) == level:
                 levels.append([])
@@ -30,9 +30,9 @@ class Solution_1:
                 getLevel(node.left, level + 1)
             if node.right:
                 getLevel(node.right, level + 1)
-            
+
         getLevel(root, 0)
-        return levels    
+        return levels
 '''
 BFS: 双端队列（deque）
 前置知识点：popleft（） 移去并且返回一个元素，deque最左侧的那一个。
@@ -46,15 +46,25 @@ class Solution_2:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
             queue = collections.deque([(root, 0)])
             res = collections.defaultdict(list)
-            
+
+            # QC: 最好能加入再写一下内层循环的样式，避免在queue里有过多重复的 level 变量
+
+
             while queue:
                 cur, level = queue.popleft()
+
+                current_level_length = len(queue)
+
+                for i in range()
+
                 if cur:
                     res[level].append(cur.val)
                     if cur.left:
                         queue.append((cur.left,level+1))
                     if cur.right:
                         queue.append((cur.right,level+1))
-                    
-                
+
+
             return [res[k] for k in res]
+
+

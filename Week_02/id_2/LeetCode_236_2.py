@@ -16,4 +16,7 @@ class Solution_1:
         if root in (None, p, q): return root
         left, right = (self.lowestCommonAncestor(kid, p, q)
                        for kid in (root.left, root.right))
+
+
+        # 非常好！
         return root if left and right else left or right

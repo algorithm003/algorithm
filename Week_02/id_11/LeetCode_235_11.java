@@ -14,6 +14,9 @@ class Solution {
         int pVal = p.val;
         int qVal = q.val;
         int rootVal = root.val;
+
+
+        // QC: 三目表达式
         if (p == root || q == root)
             return root;
         if (pVal < rootVal && qVal > rootVal)
@@ -25,5 +28,5 @@ class Solution {
             return lowestCommonAncestor(root.right, p, q);
         return root;
     }
-    
+
 }

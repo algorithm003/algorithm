@@ -2,6 +2,8 @@ import java.util.HashMap;
 
 public class LeetCode_1_16 {
     public int[] twoSum(int[] nums, int target) {
+
+        // Map<Integer, Integer>
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length; i ++) {
             map.put(nums[i], i);
@@ -17,3 +19,6 @@ public class LeetCode_1_16 {
         return new int[0];
     }
 }
+
+
+// QC：代码很不错！

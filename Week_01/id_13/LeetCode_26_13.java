@@ -1,3 +1,5 @@
+// 很不错！
+
 /**
  * Created by hantao on 2019/6/15.
  */
@@ -8,7 +10,7 @@ public class LeetCode_26_13 {
         if(nums.length == 0) return 0;
         int i = 0;
         for (int j=1;j < nums.length;j++){
-            if ( nums[j] != nums[i]){
+            if (nums[j] != nums[i]) {
                 i++;
                 nums[i] = nums[j];
             }

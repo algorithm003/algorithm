@@ -10,6 +10,8 @@ class Solution {
         TreeNode left= lowestCommonAncestor(root.left, p, q);
         TreeNode right=lowestCommonAncestor(root.right, p, q);
         // 如果两个子树或者当前节点有两个不为null，则说明当前节点为LCA
+
+        // QC: 同理 - 三目表达式
         if(left!=null&&right!=null) return root;
         if(left!=null) return left;
         if(right!=null) return right;
