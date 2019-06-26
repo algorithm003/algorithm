@@ -30,3 +30,29 @@ class Solution:
             if node.right:
                 q.put((node.right, lev + 1))
         return ans
+
+
+# 思路 2: 递归形式的层序遍历?
+# 官方给出的递归形式的遍历,其实并非真正的层序遍历,而是 DFS 加上层级信息而已
+
+
+class Solution2:
+    def levelOrder(self, root):
+        levels = []
+
+        if not root:
+            return levels
+
+        def helper(node, level):
+            if len(levels) == level:
+                levels.append([])
+
+            levels[level].append([node.val])
+
+            if node.left:
+                helper(node.left, level + 1)
+            if node.right:
+                helper(node.right, level + 1)
+
+        helper(root, 0)
+        return levels
