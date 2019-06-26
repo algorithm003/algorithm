@@ -43,7 +43,7 @@ class Solution2:
             n2 = st2.pop()
             
             if not n1 and not n2:
-                return continue # 易错点! 由于是在循环中,如果节点为空,可能只是临时为空,比如都遍历到了空的左/右子节点
+                continue # 易错点! 由于是在循环中,如果节点为空,可能只是临时为空,比如都遍历到了空的左/右子节点
             
             if not n1 or not n2:
                 return False
