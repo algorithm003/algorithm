@@ -3,11 +3,11 @@
 # 思路 仍然是二叉树的中序遍历,只需 1)借助队列 2)将每个节点与其层级数(作为元组)关联起来
 
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 from queue import Queue
 from typing import List
