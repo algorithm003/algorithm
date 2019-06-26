@@ -28,30 +28,40 @@ class TreeNode {
 
 public class LeetCode_111_MinimumDepthOfBinaryTree {
 
-    // DFS递归找出下一节点的最小深度。
+    //方法一：DFS 递归找出下一节点的最小深度。
     //时间复杂度： O(n), 只遍历了一遍节点
     //空间复杂度： O(logN)
-    public int minDepth(TreeNode root) {
+    public int minDepth1(TreeNode root) {
 
-        if (root == null){
-            return 0;
-        }
+        if (root == null) return 0;
 
-        if (root.left == null && root.right == null) {
-            return 1;
-        }
+        if (root.left == null && root.right == null) return 1;
 
         int minLeftDepth = 0;
         if (root.left != null) {
-            minLeftDepth = Math.min(minDepth(root.left), Integer.MAX_VALUE);
+            minLeftDepth = Math.min(minDepth1(root.left), Integer.MAX_VALUE);
         }
 
         int minRightDepth = 0;
         if (root.right != null) {
-            minRightDepth = Math.min(minDepth(root.right), Integer.MAX_VALUE);
+            minRightDepth = Math.min(minDepth1(root.right), Integer.MAX_VALUE);
         }
 
         return (minLeftDepth < minRightDepth ? minLeftDepth : minRightDepth) + 1;
+
+    }
+
+
+    //方法二： 递归解法，关键点：返回非空子树的最小深度。
+    public int minDepth2(TreeNode root) {
+
+        if (root == null) return 0;
+
+        if (root.left == null) return minDepth2(root.right) + 1;
+
+        if (root.right == null ) return  minDepth2(root.left) + 1;
+
+        return Math.min(minDepth2(root.left), minDepth2(root.right)) + 1;
 
     }
 
