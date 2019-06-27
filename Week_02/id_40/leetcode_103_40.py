@@ -8,7 +8,7 @@ class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
-        self.right = Noneclass TreeNode:
+        self.right = None
 
 from queue import Queue
 from typing import List
