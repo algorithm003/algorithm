@@ -1,8 +1,14 @@
 # https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/submissions/
 
 # 思路 1:迭代法
-# 其实与 102 几乎完全相同,只是判断了一下层级的奇偶性
+# 其实与 102 几乎完全相同,只是判断了一下层级的奇偶性,然后分别 append 或 insert 到列表中
 
+
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = Noneclass TreeNode:
 
 from queue import Queue
 from typing import List
