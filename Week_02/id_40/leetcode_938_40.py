@@ -1,6 +1,9 @@
 # https://leetcode-cn.com/problems/range-sum-of-bst/
 # 题目本身很简单,但是描述很不清楚,LR 之间的意思是,中序遍历之后的"之间"!
 
+
+from typing import List
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
