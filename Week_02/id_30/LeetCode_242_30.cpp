@@ -20,7 +20,7 @@ public:
     }
     
     /*
-    // 空间复杂度为0 时间复杂度 O(nlogn), 
+    // 空间复杂度为O(1),取决于sort的实现, 时间复杂度 O(nlogn)
     bool isAnagram(string s, string t) {
         sort(s.begin(), s.end());
         sort(t.begin(), t.end());

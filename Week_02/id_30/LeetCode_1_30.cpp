@@ -1,7 +1,7 @@
 class Solution {
 public:
     /*
-    // 不需要额外空间，时间复杂度是O(n^2)
+    // 空间复杂度O(1)，时间复杂度是O(n^2)
     vector<int> twoSum(vector<int>& nums, int target) {
         vector<int> ans;
         for (int i = 0; i < nums.size(); ++i) {
