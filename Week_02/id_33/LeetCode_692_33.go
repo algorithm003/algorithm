@@ -35,16 +35,19 @@ func topKFrequent(words []string, k int) []string {
 	for _, v := range words {
 		maps[v]++
 	}
+	// 构造自定义集合
 	p := make(PairList, len(maps))
 	i := 0
 	for k, v := range maps {
 		p[i] = Pair{k, v}
 		i++
 	}
+	// value相等按字母顺序，否则按value逆序
 	sort.Sort(p)
 	if p.Len() < k {
 		k = p.Len()
 	}
+	// 输出前k项
 	for j := 0; j < k; j++ {
 		result = append(result, p[j].Key)
 	}

@@ -1,3 +1,5 @@
+//+build ignored
+
 package main
 
 import (
@@ -16,14 +18,16 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func serialize(root *TreeNode) string {
+/**
+广度搜索
+当一层都为叶子节点时，返回
+*/
+func Serialize(root *TreeNode) string {
 	if root == nil {
 		return "[]"
 	}
 	result := "["
-
 	list := []*TreeNode{root}
-
 	for len(list) > 0 {
 		flag := true
 		for i := len(list); i > 0; i-- {
@@ -46,21 +50,24 @@ func serialize(root *TreeNode) string {
 	return result[:len(result)-1] + "]"
 }
 
-func deserialize(data string) *TreeNode {
+func Deserialize(data string) *TreeNode {
 	var root TreeNode
 	if len(data) <= 2 {
 		return &root
 	}
+	// 构造root节点
 	data = data[1 : len(data)-1]
 	split := strings.Split(data, ",")
 	v, _ := strconv.Atoi(split[0])
-	split = split[1:]
 	root.Val = v
-	list := []*TreeNode{&root}
+	split = split[1:]
 
+	list := []*TreeNode{&root}
+	// 层次搜索
 	for {
 		node := list[0]
 		list = list[1:]
+		// 左
 		if len(split) > 0 {
 			if split[0] != "null" {
 				v, _ = strconv.Atoi(split[0])
@@ -71,6 +78,7 @@ func deserialize(data string) *TreeNode {
 		} else {
 			break
 		}
+		// 右
 		if len(split) > 0 {
 			if split[0] != "null" {
 				v, _ = strconv.Atoi(split[0])
@@ -86,11 +94,11 @@ func deserialize(data string) *TreeNode {
 }
 
 func main() {
-	//root := &TreeNode{Val: 1}
-	//root.Left = &TreeNode{Val: 2}
-	//root.Right = &TreeNode{Val: 3}
-	//root.Right.Left = &TreeNode{Val: 4}
-	//root.Right.Right = &TreeNode{Val: 5}
-	//fmt.Println(serialize(root))
-	fmt.Println(deserialize("[1,2,3,null,null,4,5]"))
+	root := &TreeNode{Val: 1}
+	root.Left = &TreeNode{Val: 2}
+	root.Right = &TreeNode{Val: 3}
+	root.Right.Left = &TreeNode{Val: 4}
+	root.Right.Right = &TreeNode{Val: 5}
+	fmt.Println(Serialize(root))
+	fmt.Println(Deserialize("[1,2,3,null,null,4,5]"))
 }
