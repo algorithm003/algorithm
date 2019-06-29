@@ -10,14 +10,9 @@
 class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        TreeNode *max = (p->val > q->val) ? p : q;
-        TreeNode *min = (max == p) ? q : p;
-        if (root->val > min->val && root->val < max->val)
-            return root;
-        if (root->val == min->val || root->val == max->val)
-            return root;
-        if (root->val > max->val)
-            return lowestCommonAncestor(root->left, p, q);
-        return lowestCommonAncestor(root->right, p, q);
+        return (root->val > p->val && root->val > q->val) ? 
+                   lowestCommonAncestor(root->left, p, q) : 
+               (root->val < p->val && root->val < q->val) ? 
+                   lowestCommonAncestor(root->right, p, q) : root;
     }
 };
