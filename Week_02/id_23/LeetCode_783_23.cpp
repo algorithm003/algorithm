@@ -10,20 +10,18 @@
 class Solution {
 public:
     int minDiffInBST(TreeNode* root) {
-        int prev = -1, mindiff = INT_MAX;
-        inorder(root, prev, mindiff);
-        return mindiff;
-    }
-    
-    void inorder(TreeNode *root, int &prev, int &mindiff) {
         if (root == NULL)
-            return;
+            return 0;
         if (root->left != NULL)
-            inorder(root->left, prev, mindiff);
+            minDiffInBST(root->left);
         if (prev > 0)
-            mindiff = min(mindiff, root->val - prev);
+            minDiff = min(minDiff, root->val - prev);
         prev = root->val;
         if (root->right != NULL)
-            inorder(root->right, prev, mindiff);
+            minDiffInBST(root->right);
+        return minDiff;
     }
+private:
+    int prev = -1;
+    int minDiff = INT_MAX;
 };
