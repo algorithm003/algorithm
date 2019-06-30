@@ -5,22 +5,28 @@
  */
 public class LeetCode_783_34 {
     TreeNode pre = null;
-    int min =Integer.MAX_VALUE;
+    int min = Integer.MAX_VALUE;
+
     public int minDiffInBST(TreeNode root) {
         _dfs(root);
         return min;
     }
-    private void _dfs(TreeNode root){
-        if (root ==null) return;
+
+    private void _dfs(TreeNode root) {
+        if (root == null) return;
         _dfs(root.left);
-        if(pre !=null) min = Math.min(root.val-pre.val,min);
-        pre =root;
+        if (pre != null) min = Math.min(root.val - pre.val, min);
+        pre = root;
         _dfs(root.right);
     }
+
     public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
 }
