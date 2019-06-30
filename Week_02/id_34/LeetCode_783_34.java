@@ -7,9 +7,6 @@ public class LeetCode_783_34 {
     int min = Integer.MAX_VALUE;
     TreeNode pre;
 
-    /*
-     * BFS
-     */
     public int minDiffInBST(TreeNode root) {
         if (root == null) return 0;
         minDiffInBST(root.left);
@@ -21,9 +18,7 @@ public class LeetCode_783_34 {
         return min;
     }
 
-    /*
-     * DFS
-     */
+
     public int minDiffInDFS(TreeNode root) {
         dfs(root);
         return min;
