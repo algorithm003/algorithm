@@ -20,13 +20,13 @@ DFS:
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        if (root == None or p == root or q == root):
+        if (root is None or p == root or q == root):
             return root
         left = self.lowestCommonAncestor(root.left, p, q)
         right = self.lowestCommonAncestor(root.right, p, q)
-        if left == None:
+        if left is None:
             return right
-        elif right == None:
+        elif right is None:
             return left
         else:
             return root
