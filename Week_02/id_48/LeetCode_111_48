@@ -1,0 +1,92 @@
+//Given a binary tree, find its minimum depth.
+//
+// The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+//
+// Note: A leaf is a node with no children.
+//
+// Example:
+//
+// Given binary tree [3,9,20,null,null,15,7],
+//
+//
+//    3
+//   / \
+//  9  20
+//    /  \
+//   15   7
+//
+// return its minimum depth = 2.
+//
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public int minDepth(TreeNode root) {
+        /**
+         BFS is much faster and better than DFS in terms of this question
+         **/
+
+         // Solution 1 -- faster than 100%
+         // BFS -- Level Order Traversal -- maintain a queue
+
+         // First Evaluation
+         int depth = 0;
+         if (root == null) return depth;
+
+         // Queue Initialization
+         Queue<TreeNode> queue = new LinkedList<>();
+         queue.add(root);
+
+         // Level order traversal
+         while(queue != null){
+             int currLevelSize = queue.size();
+             depth ++;
+             // For current level:
+             for(int i = 0; i < currLevelSize; i++){
+                 TreeNode node = queue.poll();
+
+                 // If the node doesn't have any children
+                 if (node.left == null && node.right == null)
+                     return depth;
+
+                 if (node.left != null)
+                     queue.add(node.left);
+
+                 if (node.right != null)
+                     queue.add(node.right);
+             }
+         }
+         return depth;
+
+        // Solution 2  -- faster than
+        // DFS -- recursion
+
+        // Recursion Terminator
+        if (root == null) return 0;
+
+        // Process current level logic
+        // Drill Down
+        int left = minDepth(root.left);
+        int right = minDepth(root.right);
+
+        return (left == 0 || right == 0) ? left + right + 1 : Math.min(left, right) + 1;
+
+    }
+}
