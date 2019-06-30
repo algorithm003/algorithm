@@ -1,0 +1,11 @@
+#111. 二叉树的最小深度
+public class Solution {
+    public int MinDep(TreeNode root) {
+        if(root==null)
+            return 0;
+        if(root.left==null||root.right==null)
+            return Math.Max(MinDep(root.left),MinDep(root.right))+1;
+        else
+            return Math.Min(MinDep(root.left),MinDep(root.right))+1;
+    }
+}
