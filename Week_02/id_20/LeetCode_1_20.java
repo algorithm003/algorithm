@@ -10,8 +10,10 @@
 *   学号：020
 *
 * */
+import java.util.Map;
+import java.util.HashMap;
 
-public class LeetCode_1_TwoSum {
+public class LeetCode_1_20 {
 
 
     //方法一：暴力解法，使用了双循环遍历计算出符合的答案。
