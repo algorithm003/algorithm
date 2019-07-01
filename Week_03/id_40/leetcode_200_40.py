@@ -2,7 +2,7 @@
 # 典型的连通性问题.通过 DFS 记忆搜索可解决.
 
 # 优化前:
-class Solution(object):
+class Solution1(object):
     def numIslands(self, grid):
         """
         :type grid: List[List[str]]
@@ -43,7 +43,7 @@ class Solution(object):
 
 # 优化后:
 
-class Solution(object):
+class Solution2(object):
     def numIslands(self, grid):
         """
         :type grid: List[List[str]]
