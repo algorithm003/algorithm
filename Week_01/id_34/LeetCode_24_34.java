@@ -7,7 +7,7 @@
 public class LeetCode_24_34 {
     class Solution {
         public ListNode swapPairs(ListNode head) {
-            if(head == null || head.next == null) return head;
+            if (head == null || head.next == null) return head;
             ListNode next = head.next;
             head.next = swapPairs(next.next);
             next.next = head;
@@ -17,6 +17,9 @@ public class LeetCode_24_34 {
     public class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 }
