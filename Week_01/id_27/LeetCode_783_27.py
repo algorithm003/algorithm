@@ -16,4 +16,3 @@ class Solution:
             self.minDiffInBST(root.right)
 
         return self.res
-
