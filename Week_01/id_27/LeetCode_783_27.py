@@ -14,5 +14,4 @@ class Solution:
         self.pre = root.val
         if root.right:
             self.minDiffInBST(root.right)
-
         return self.res
