@@ -20,6 +20,7 @@ public class LeetCode_200_20 {
 
 
     //方法一：Flood fill
+    //时间复杂度：O(n²)
     public int numIslands(char[][] grid) {
         int count = 0;
         if (grid.length == 0 ) return 0;
@@ -79,7 +80,8 @@ public class LeetCode_200_20 {
 
 
     //方法二：并查集
-
+    //时间复杂度：O(n²)
+    //空间复杂度：O(n)
     int[] roots;
 
     public int numIslands2(char[][] grid) {
