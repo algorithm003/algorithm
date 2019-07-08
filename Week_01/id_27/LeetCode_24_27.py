@@ -1,3 +1,5 @@
+import collections
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, x):
@@ -14,6 +16,7 @@ class Solution:
     def swapPairs(self, head: ListNode) -> ListNode:
         dump = ListNode(0)
         pre, dump.next = dump, head
+        collections.defaultdict
 
         while pre.next and pre.next.next:
             a = pre.next
