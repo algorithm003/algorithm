@@ -1,0 +1,13 @@
+
+#136. 只出现一次的数字
+class Solution:
+    def singleNumber(self, num: List[int]) -> int:
+        
+        """
+        :type num: List[int]
+        :rtype: int
+        """
+        result = 0
+        for item in num:
+            result^=item
+        return result

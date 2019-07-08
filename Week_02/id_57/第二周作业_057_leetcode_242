@@ -1,0 +1,17 @@
+#242. 有效的字母异位词
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if len(t) != len(s):
+            return False
+        c = set(t)
+        for i in c:
+            if t.count(i) != s.count(i):
+                return False
+        return True
+        for item in num:
+            result^=item

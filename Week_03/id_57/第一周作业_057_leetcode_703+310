@@ -1,0 +1,47 @@
+#703. 数据流中的第K大元素
+
+import heapq
+
+
+class KthLargest:
+    def __init__(self, k, nums):
+        self.pool = nums
+        self.k = k
+        heapq.heapify(self.pool)
+        while len(self.pool) > k:
+            heapq.heappop(self.pool)
+
+    def add(self, val: int) -> int:
+        if len(self.pool) < self.k:
+            heapq.heappush(self.pool, val)
+        elif val > self.pool[0]:
+            heapq.heapreplace(self.pool, val)
+        return self.pool[0]
+
+
+
+
+#310. 最小高度树 python
+import heapq
+class Solution(object):
+    def findMinHeightTrees(self, n, edges):
+        if n==1:
+            return [0]
+        dict_nei={}
+        for e in edges:
+            dict_nei[e[0]] = [e[1]] if e[0] not in dict_nei else dict_nei[e[0]]+[e[1]]
+            dict_nei[e[1]] = [e[0]] if e[1] not in dict_nei else dict_nei[e[1]]+[e[0]]
+        hq=[]
+        for nei in dict_nei:
+            heapq.heappush(hq,(len(dict_nei[nei]),nei,dict_nei[nei]))
+        while len(dict_nei.keys())>=3:
+            node_neis=[]
+            while hq[0][0]==1:
+                _,node,neis=heapq.heappop(hq)
+                del dict_nei[node]
+                node_neis.append((node,neis))
+            for node,neis in node_neis:
+                for nei in neis:
+                    dict_nei[nei].remove(node)
+                    heapq.heappush(hq,(len(dict_nei[nei]),nei,dict_nei[nei]))
+        return dict_nei.keys()
