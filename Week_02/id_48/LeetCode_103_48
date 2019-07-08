@@ -1,0 +1,82 @@
+//Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
+//
+//
+//For example:
+//Given binary tree [3,9,20,null,null,15,7],
+//
+//    3
+//   / \
+//  9  20
+//    /  \
+//   15   7
+//
+//
+//
+//return its zigzag level order traversal as:
+//
+//[
+//  [3],
+//  [20,9],
+//  [15,7]
+//]
+//
+//
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+
+        Stack<TreeNode> from_right = new Stack<>();
+        Stack<TreeNode> from_left = new Stack<>();
+        List<List<Integer>> res = new ArrayList<>();
+        TreeNode curr = root;
+        if(root == null) return res;
+        from_left.push(curr);
+
+        while(!from_left.isEmpty() || !from_right.isEmpty()){
+            List<Integer> level= new ArrayList<Integer>();
+
+            while(!from_left.isEmpty()){
+                curr = from_left.pop();
+                level.add(curr.val);
+                if(curr.left != null)
+                    from_right.push(curr.left);
+                if(curr.right != null)
+                    from_right.push(curr.right);
+            }
+            if(!level.isEmpty()) res.add(level);
+
+            List<Integer> level2= new ArrayList<Integer>();
+
+            while(!from_right.isEmpty()){
+                curr = from_right.pop();
+                level2.add(curr.val);
+                if(curr.right != null)
+                    from_left.push(curr.right);
+                if(curr.left != null)
+                    from_left.push(curr.left);
+            }
+            if(!level2.isEmpty()) res.add(level2);
+
+        }
+        return res;
+    }
+}

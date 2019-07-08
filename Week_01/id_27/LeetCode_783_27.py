@@ -10,9 +10,8 @@ class Solution:
             return 0
         if root.left:
             self.minDiffInBST(root.left)
-        self.res = min(self.res, self.pre - root.val)
+        self.res = min(self.res, root.val - self.pre)
         self.pre = root.val
         if root.right:
             self.minDiffInBST(root.right)
-
         return self.res

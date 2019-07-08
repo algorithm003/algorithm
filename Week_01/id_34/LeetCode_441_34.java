@@ -7,39 +7,41 @@
  */
 public class LeetCode_441_34 {
     /**
-     *   常规法
+     * 常规法
      */
     public int arrangeCoins(int n) {
         if (n == 1) return 1;
-             int num=0;
-             for (int i = 1;i <= n;i ++){
-                 n = n-i;
-                 if(n < 0 ) break;
-                 num++;
-             }
-             return num;
+        int num = 0;
+        for (int i = 1; i <= n; i++) {
+            n = n - i;
+            if (n < 0) break;
+            num++;
+        }
+        return num;
     }
+
     /**
-     *   二分法
+     * 二分法
      */
     public int arrangeCoins1(int n) {
-        int i = 1 ,j = n, mid = 0;
-          while (i <= j){
-              mid = i + (j-i)/2;
-              if((double)(1+mid)/2 == (double)n/mid){
-                  return mid;
-              }else if((double)(1+mid)/2 >(double) n/mid){
-                  j =mid -1;
-              }else{
-                  i = mid+1;
-              }
-          }
-          return j;
+        int i = 1, j = n, mid = 0;
+        while (i <= j) {
+            mid = i + (j - i) / 2;
+            if ((double) (1 + mid) / 2 == (double) n / mid) {
+                return mid;
+            } else if ((double) (1 + mid) / 2 > (double) n / mid) {
+                j = mid - 1;
+            } else {
+                i = mid + 1;
+            }
+        }
+        return j;
     }
+
     /**
-     *   数学公式
+     * 数学公式
      */
     public int arrangeCoins2(int n) {
-        return (int)((-1+Math.sqrt(1+8*(long)n))/2);
+        return (int) ((-1 + Math.sqrt(1 + 8 * (long) n)) / 2);
     }
 }
