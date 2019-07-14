@@ -1,0 +1,31 @@
+#169. 求众数
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        count = {}
+        for num in nums:                                                # 统计每个数字出现的次数
+            if num in count:
+                count[num] += 1
+            else:
+                count[num] = 1
+        return {v: k for k, v in count.items()}[max(count.values())]    # 字典键值反转，找到出现次数最多的数字
+
+
+
+#720. 词典中最长的单词
+
+class Solution:
+    def longestWord(self, words) -> str:
+        words.sort()
+        save = set()
+        res = ""
+        for word in words:
+            # 如果单词通过集合中的单词扩展而来，或者单词只有一个字母
+            if word[:-1] in save or word[:-1] == '':
+                if len(word) > len(res):        # 遇到更长的单词
+                    res = word                  # 更新结果
+                save.add(word)                  # 添加到单词表
+        return res
