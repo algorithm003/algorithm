@@ -1,0 +1,13 @@
+﻿using System;
+
+public class LeedCode_104_59
+{
+	public int MaxDepth(BTreeNode root)
+        {
+            if(null == root)
+                return 0;
+            var left = MaxDepth(root.left)+1;
+            var right = MaxDepth(root.right) + 1;
+            return left > right ? left : right;
+        }
+}
